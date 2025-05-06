@@ -41,18 +41,29 @@ public class Main {
         System.out.println("Scores:");
         System.out.println("You: " + userScore);
         System.out.println("Computer: " + computerScore);
+        continuePlaying = askToContinue(scanner);
 
-        System.out.println("Do you want to play again? (Yes/No)");
-        String userResponse = scanner.next();
-
-        if (!userResponse.equalsIgnoreCase("Yes")) {
-            continuePlaying = false;
-            }
         }
         System.out.println("Thank you for playing!");
         System.out.println("Final scores:");
         System.out.println("You: " + userScore);
         System.out.println("Computer: " + computerScore);
         scanner.close();
+    }
+
+    private static boolean askToContinue(Scanner scanner) {
+        String userResponse;
+        while (true) {
+            System.out.println("Do you want to play again? (Yes/No)");
+            userResponse = scanner.next();
+
+            if (userResponse.equalsIgnoreCase("Yes")) {
+                return true;
+            } else if (userResponse.equalsIgnoreCase("No")) {
+                return false;
+            } else {
+                System.out.println("Incorrect answer. Please put 'Yes or 'No");
+            }
+        }
     }
 }

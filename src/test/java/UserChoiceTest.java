@@ -1,10 +1,8 @@
 import modules.GetUserChoice;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
-import org.testng.internal.protocols.Input;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.Scanner;
 
 public class UserChoiceTest {
 
